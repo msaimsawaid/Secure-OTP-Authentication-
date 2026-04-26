@@ -26,10 +26,9 @@ The following security controls have been integrated into the codebase to satisf
 SSD_Assignment3_MuhammadSaimSawaid/
 ├── src/                    # Source Code
 │   ├── app.py              # Backend logic with RBAC & STRIDE mitigations
-│   └── static/             # Frontend UI files
-│       ├── index.html
-│       ├── script.js
-│       └── styles.css
+│   ├── index.html
+│   ├── script.js
+│   └── styles.css
 ├── docs/                   # Documentation
 │   ├── THREAT_MODEL.md     # STRIDE Analysis
 │   └── SAST_REPORT.md      # Static Analysis Security Testing
