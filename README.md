@@ -4,7 +4,7 @@ Here is the updated, professionally formatted `README.md` for your final submiss
 
 ---
 
-# Secure OTP Authentication System (SSD Assignment 3)
+# Secure OTP Authentication System 
 
 ## Description
 This project is a secure implementation of a One-Time Password (OTP) authentication system, developed as part of the **Software Security Design (SSD)** course. It translates a UMLsec-based secure design into a working prototype using defensive programming and secure coding principles. The system provides a robust authentication and authorization flow, protecting against common web vulnerabilities identified in the **STRIDE** threat model.
