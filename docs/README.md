@@ -4,7 +4,7 @@ Here is the updated, professionally formatted `README.md` for your final submiss
 
 ---
 
-# Secure OTP Authentication System (SSD Assignment 3)
+# Secure OTP Authentication System 
 
 ## Description
 This project is a secure implementation of a One-Time Password (OTP) authentication system, developed as part of the **Software Security Design (SSD)** course. It translates a UMLsec-based secure design into a working prototype using defensive programming and secure coding principles. The system provides a robust authentication and authorization flow, protecting against common web vulnerabilities identified in the **STRIDE** threat model.
@@ -90,8 +90,3 @@ To run the application locally for testing:
     *Open your browser and navigate to `http://localhost:8000`.*
 
 ---
-
-### **Final Submission Reminders for April 26**:
-* Ensure **File-level** and **Function-level** comments are present in `app.py` and `script.js`.
-* Verify that your actual `.env` file is NOT included in the final zip if it contains personal passwords; only include `.env.example`.
-* Name your final submission: `SSD_Assignment3_MuhammadSaimSawaid.zip`.
