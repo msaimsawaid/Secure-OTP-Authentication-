@@ -94,7 +94,6 @@ def hash_otp(otp):
     dk = hashlib.pbkdf2_hmac('sha256', otp.encode('utf-8'), b'otp_salt', 100000)
     hashed_val = dk.hex()
   
-    print(f"\n[SECURITY DEBUG] Plaintext OTP: {otp} | Salted Hash: {hashed_val}\n")
     return hashed_val
 # ============================================================================
 # FUNCTION: validate_otp_format
