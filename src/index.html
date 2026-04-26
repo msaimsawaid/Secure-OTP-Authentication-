@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Secure Authentication</h1>
+                <p>One-Time Password Verification</p>
+            </div>
+
+            <!-- Step 1: Request OTP -->
+            <div id="step1" class="auth-step active">
+                <form id="requestOtpForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="requestBtn">
+                        Request OTP
+                    </button>
+                    <span class="loading" id="requestLoading" style="display: none;">
+                        <span class="spinner"></span> Sending OTP...
+                    </span>
+                </form>
+                <div class="success-message" id="requestSuccess" style="display: none;">
+                    <span class="checkmark">✓</span>
+                    <p>OTP sent successfully! Check your email.</p>
+                </div>
+                <div class="error-alert" id="requestError" style="display: none;"></div>
+                <div class="info-box">
+                    <p><strong>ℹ️ Info:</strong> You'll receive a 6-digit code via email. It expires in 3 minutes.</p>
+                </div>
+            </div>
+
+            <!-- Step 2: Verify OTP -->
+            <div id="step2" class="auth-step">
+                <form id="verifyOtpForm">
+                    <div class="form-group">
+                        <label for="otp">Enter OTP</label>
+                        <div class="otp-input-group">
+                            <input 
+                                type="text" 
+                                id="otp" 
+                                name="otp" 
+                                maxlength="6" 
+                                required 
+                                placeholder="000000"
+                                inputmode="numeric"
+                                autocomplete="one-time-code"
+                            >
+                            <span class="timer" id="otpTimer"></span>
+                        </div>
+                        <span class="error-message" id="otpError"></span>
+                    </div>
+
+                    <div class="attempt-counter" id="attemptCounter" style="display: none;">
+                        <p id="attemptText"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="verifyBtn">
+                        Verify OTP
+                    </button>
+                    <span class="loading" id="verifyLoading" style="display: none;">
+                        <span class="spinner"></span> Verifying...
+                    </span>
+
+                    <button type="button" class="btn btn-secondary" id="backBtn">
+                        Back to Email
+                    </button>
+                </form>
+                <div class="success-message" id="verifySuccess" style="display: none;">
+                    <span class="checkmark">✓</span>
+                    <p>Authentication successful!</p>
+                    <p id="tokenDisplay"></p>
+                </div>
+                <div class="error-alert" id="verifyError" style="display: none;"></div>
+            </div>
+
+            <!-- Lockout Message -->
+            <div id="lockoutMessage" class="lockout-alert" style="display: none;">
+                <h2>⏰ Account Temporarily Locked</h2>
+                <p>Too many failed attempts. Please try again in <span id="lockoutTimer"></span>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
