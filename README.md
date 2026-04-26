@@ -83,7 +83,7 @@ To run the application locally for testing:
 2.  **Start the Frontend (HTTP Server)**:
     In a new terminal:
     ```bash
-    cd src/static
+    cd src
     python -m http.server 8000
     ```
     *Open your browser and navigate to `http://localhost:8000`.*
