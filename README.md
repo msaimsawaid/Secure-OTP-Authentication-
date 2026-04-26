@@ -90,8 +90,3 @@ To run the application locally for testing:
     *Open your browser and navigate to `http://localhost:8000`.*
 
 ---
-
-### **Final Submission Reminders for April 26**:
-* Ensure **File-level** and **Function-level** comments are present in `app.py` and `script.js`.
-* Verify that your actual `.env` file is NOT included in the final zip if it contains personal passwords; only include `.env.example`.
-* Name your final submission: `SSD_Assignment3_MuhammadSaimSawaid.zip`.
